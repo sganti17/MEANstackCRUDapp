@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            search job
+        </title>
+    </head>
+    <body>
+        <div id="search" class=" container" style="padding:40px;font-family: monospace; font-size: 20px; color:white">
+            <form id="searchForm" ng-model="jobList">
+		<label>Search by Job Title</label><br>
+                <input type="text" style="color:black" name="searchTitle" ng-model="searchTitle" ><br>
+		<label>Search by Keywords</label><br>
+		<input type="text" style="color:black" name="searchKeyword" ng-model="searchKeyword"><br>
+		<label>Location</label><br>
+		<input type="text"style="color:black" name="searchLocation" ng-model="searchLocation"><br><br>
+
+                <button class="btn btn-primary" type="reset" name="clear" ng-click="clear()">Clear</button>
+		<button class="btn btn-primary" type="button" name="search" ng-click="searchjob()">Search</button> <a href="/home" style="color:white">Back</a>  <br/><br/>
+                
+	
+                
+                <div>
+                    <table class="table" style="width: 600px">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>
+                                    job title
+                                </th>
+                                
+                                <th>
+                                    keywords
+                                </th>
+                                
+                                <th>
+                                    job Location
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr ng-repeat="input in inputs" ng-if="inputs.length !=0" ng-controller="searchCtrl"style="color:white">
+                                <td>
+                                    {{input.jobTitle}}
+                                  
+                                </td>
+                                
+                                <td>
+                                    {{input.keywords}}
+                                </td>
+                                
+                                <td>
+                                    {{input.jobLocation}}
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+	</form>
+</div>
+
+    </body>
+</html>
+

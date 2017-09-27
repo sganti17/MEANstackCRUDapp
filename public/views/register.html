@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            search job
+        </title>
+    </head>
+    <body>
+        
+    
+<div id="registerForm" style="padding:40px;font-family: monospace; font-size: 20px;color:white">
+	<h2>Register</h2>
+        <form id="regForm" ng-submit="regUser()" ng-controller="regCtrl">
+		<label>User Name</label><br>
+                <input type="text" style="color:black" name="username" ng-model="username" required><br/>
+		<label>Password</label><br>
+		<input type="password" style="color:black" name="password" ng-model="password"required><br>
+		<label>Email</label><br>
+		<input type="email" style="color:black" name="email" ng-model="email"required><br>
+		<label>Location</label><br>
+		<input type="text" style="color:black" name="location" ng-model="location"required><br>
+		<label>User Type</label>
+		<div id="gInput">
+			<input type="radio" style="color:black" name="usertype" id="utype_C" value="company" ng-model="userType"><span style="margin-left: 2px;"required>Company</span><br>
+			<input type="radio"  style="color:black"name="usertype" id="utype_J" value="seeker" ng-model="userType"><span style="margin-left: 2px;"required>Job Seeker</span>
+		</div><br>
+		<button class="btn btn-primary"  type="submit" name="register">Register</button>
+                <a href="/" style="color:white">Back</a>
+	</form><br/><br/>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div id="loginForm" ng-controller="loginCtrl">
+	<form ng-submit="loginUser()" class="contrainer" style="padding:40px;font-family: monospace; font-size: 20px">
+            <h1 style="font-family: monospace; font-size: 30px; font-weight:bold;color: white">Please Sign In here </h1>
+		<input type="text" name="username" placeholder="Username" ng-model="username"required><br><br>
+		<input type="password" name="password" placeholder="Password" ng-model="password"required><br><br>
+		<button type="submit"  value="login">Login</button>
+		<button type="button" value="register"> <a href="/register">Register</a></button>
+	</form>
+	
+</div>

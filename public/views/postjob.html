@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Post Job
+        </title>
+    </head>
+    <body>
+        <navdir>  </navdir>
+
+        <div id="jobForm" class="container" style="padding:40px;font-family: monospace; font-size: 20px;color:white">
+	<h2>Post A Job</h2>
+	<form id="postJob" ng-submit="postjob()">
+		<label>Job Title</label><br>
+		<input type="text" style="color:black" name="jobTitle" ng-model="jobTitle"required><br>
+		<label>Job Description</label><br>
+		<textarea rows="4" cols="50" type="text" style="color:black" name="jobDescription" ng-model="jobDescription"required></textarea><br>
+		<label>Keywords</label><br>
+		<input type="text" style="color:black" name="keywords" ng-model="keywords"required><br>
+		<label>Location</label><br>
+		<input type="text" style="color:black" name="jobLocation" ng-model="jobLocation"required><br><br>
+
+		<button class="btn btn-primary" type="submit" name="postjob">Post Job</button>
+                 <a href="/home" style="color:white">Back</a> 
+	</form><br><br>
+
+</div>
+    </body>
+</html>
